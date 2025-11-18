@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main_gradient">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_header_gradient">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup to continue"
+            android:textSize="16sp"
+            android:textColor="#FCE4FF" />
+    </LinearLayout>
+
+    <!-- Card Container -->
+    <LinearLayout
+        android:id="@+id/loginCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_margin="24dp"
+        android:layout_below="@id/header"
+        android:background="@drawable/bg_card">
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:padding="14dp"
+            android:background="@drawable/bg_input"
+            android:textColor="#FF007F"
+            android:textColorHint="#D96CFF"
+            android:drawableTint="#FF007F"/>
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:padding="14dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_input"
+            android:textColor="#FF007F"
+            android:textColorHint="#D96CFF"
+            android:inputType="textPassword"
+            android:drawableTint="#FF007F"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="SIGNUP"
+            android:textStyle="bold"
+            android:layout_marginTop="22dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button_gradient"/>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms an Conditons"
+            android:textColor="#FF00C3"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+</RelativeLayout>
