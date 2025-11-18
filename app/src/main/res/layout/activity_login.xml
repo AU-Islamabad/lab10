@@ -80,6 +80,33 @@
             android:textColor="#FFFFFF"
             android:background="@drawable/bg_button_gradient"/>
 
+        <!-- Google Login -->
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_google_btn"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_google"
+                android:layout_marginEnd="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login with Google"
+                android:textStyle="bold"
+                android:textColor="#FF007F"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
         <!-- Forgot Password -->
         <TextView
             android:id="@+id/forget"
@@ -90,13 +117,15 @@
             android:layout_marginTop="14dp"
             android:layout_gravity="center" />
 
+        <!-- Signup Redirect -->
         <TextView
             android:id="@+id/signup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dont have an account? Signup"
+            android:text="Don't have an account? Signup"
             android:textColor="#FF00C3"
             android:layout_marginTop="14dp"
             android:layout_gravity="center" />
+
     </LinearLayout>
 </RelativeLayout>

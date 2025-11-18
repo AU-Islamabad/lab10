@@ -11,16 +11,13 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     Button b_login;
     EditText et_email, et_pass;
@@ -32,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -45,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         tv_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this, SignupActivity.class);
+                Intent i= new Intent(LoginActivity.this, SignupActivity.class);
                 startActivity(i);
             }
         });
@@ -70,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()){
                                     //home screen
-                                    Intent i= new Intent(MainActivity.this, HomeActivity.class);
+                                    Intent i= new Intent(LoginActivity.this, HomeActivity.class);
                                     startActivity(i);
                                 }else {
-                                    Toast.makeText(MainActivity.this,"Incorrect Email/Password",
+                                    Toast.makeText(LoginActivity.this,"Incorrect Email/Password",
                                             Toast.LENGTH_LONG).show();
                                 }
                             }

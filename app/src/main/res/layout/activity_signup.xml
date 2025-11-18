@@ -69,7 +69,7 @@
             android:inputType="textPassword"
             android:drawableTint="#FF007F"/>
 
-        <!-- Login Button -->
+        <!-- Signup Button -->
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
@@ -80,12 +80,39 @@
             android:textColor="#FFFFFF"
             android:background="@drawable/bg_button_gradient"/>
 
-        <!-- Forgot Password -->
+        <!-- Google Sign Up Button -->
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_google_btn"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_google"
+                android:layout_marginEnd="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up with Google"
+                android:textStyle="bold"
+                android:textColor="#FF007F"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Terms -->
         <TextView
             android:id="@+id/forget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terms an Conditons"
+            android:text="Terms and Conditions"
             android:textColor="#FF00C3"
             android:layout_marginTop="14dp"
             android:layout_gravity="center" />
